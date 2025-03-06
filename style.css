@@ -1,0 +1,563 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url("\font\FontDodo.otf") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 600;
+    text-decoration: none;
+}
+body
+{
+    font-family: "MyFont", 'Montserrat', Arial, sans-serif;
+}
+
+main{
+    padding:0 130px 0 100px;
+}
+
+.shapka {
+    display: flex;
+    align-items: center;
+    padding: 12px 32px;
+    background: white;
+    border: 1px rgb(219, 219, 219) solid;
+    height: 52px;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+    line-height: 1.4;
+    padding:0 130px 0 100px;
+}
+
+.meny {
+    color: black;
+    font-size: 12px;
+}
+.meny:hover{
+    color:#FF6666;}
+
+.meny:first-child {
+    position: relative;
+    padding-left: 15px; 
+}
+
+.meny:first-child::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: #FF6666;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); 
+}
+
+
+.sharf{
+    padding: 24px 0px 16px;
+    margin: 0 32px ;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left{
+    display: flex;
+    line-height: 1.4;
+}
+
+.info{
+    font-size: 12px;
+    margin-left: 49px;
+    line-height: 14px;
+}
+.logo{
+    height: 42px;
+}
+.all-logo{
+    margin-right:40px;
+}
+
+.left a {
+    color: #FF6666;
+
+}
+
+.point {
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    margin-bottom: 3px;
+    border-radius: 3px;
+    background-color: black;
+}
+
+h1{
+    padding-top: 3px;
+}
+.deliv-dop-info{
+    font-size: 12px;
+    line-height: 16px;
+}
+.star{
+    transform: translateY(20%); 
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: auto;
+}
+
+.dodo-coin {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+} 
+span .label{
+    text-decoration: none;
+    color:0;
+}
+
+.icon svg {
+    width: 24px;
+    height: 24px;
+    fill: #FF6600; 
+    color: #FF6600;
+}
+
+.dodo-coin .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4px; 
+}
+
+.dodo-coin span{
+    color: #000000;
+}
+.dodo-coin:hover span {
+    color: #FF6600; 
+}
+.dodo-coin:hover .icon path {
+    fill: #FF6600; 
+}
+
+.sign {
+    background: #ddddddb0;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
+}
+
+.list {
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    background-color: rgba(255, 255, 255, 0.75);
+    z-index: 10;
+    backdrop-filter: blur(20px);
+    font-size: 12px;
+    padding: 10px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    margin-right : 32 px;
+}
+
+.list ul {
+    display: flex;
+    align-items: center;
+    line-height: 1.4;
+}
+
+.list a {
+    color: #000000;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.list li {
+    position: relative;
+}
+
+.list li div {
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.separator{
+    margin-left: 10px;
+}
+
+.list li .menu-item:hover {
+    color: #ff6600;
+}
+.dropdown-toggle:hover a {
+    color: #ff6600; /* Меняем цвет текста */
+}
+
+.dropdown-toggle:hover svg path {
+    fill: #ff6600; /* Меняем цвет иконки */
+}
+.dropdown-toggle {
+    background-color: #ddddddb0 !important;
+    border-radius: 20px;
+    padding-right: 10px;
+    display: flex;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px 0 10px 0;
+    min-width: 150px;
+}
+
+.dropdown-menu a {
+    display: block;
+    color: #000;
+}
+
+.dropdown-menu a:hover {
+    background-color: #ddddddb0;
+    color: black;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.basket {
+    background: #ff6600;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+.basket:hover {
+    background: #e05800;
+}
+
+.card {
+    width: 196px;
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card img {
+    width: 196px;
+    height: 248px;
+    border-radius: 30px;
+}
+.storisades{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.recomendation {
+    width: 100%;
+    max-width: 900px;
+    margin-left: 32px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+    margin-top: 25px;
+}
+
+.rec {
+    display: flex;
+    gap: 20px;
+}
+
+.rec > div {
+    background: white;
+    border-radius: 15px;
+    padding: 16px;
+    width: 250px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.imgrec {
+    width: 80px;
+    height: auto;
+}
+
+.recinfo {
+    position: relative; 
+    display: inline-block;
+    flex-direction: column;
+    line-height: 1.6;
+}
+
+
+.rectitle {
+    font-size: 12px;
+}
+
+.recprice {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+}
+
+.recprice2 {
+    font-size: 14px;
+    position: relative;
+    display: inline-block;
+}
+
+.rec2, .rec3 {
+    position: relative;
+}
+
+.discount {
+    position: absolute;
+    top: 83%; /* Размещаем SVG по центру цены */
+    left: 23%; /* Центрируем относительно цены */
+    transform: translate(-50%, -50%); /* Точное выравнивание */
+    width: 50%; /* Немного больше, чтобы покрыть всю ширину текста */
+    height: 20%;
+    pointer-events: none; /* Чтобы не мешало кликам */
+}
+
+
+.discount1 {
+    position: absolute;
+    top: 83%; /* Размещаем SVG по центру цены */
+    left: 35%; /* Центрируем относительно цены */
+    transform: translate(-50%, -50%); /* Точное выравнивание */
+    width: 75%; /* Немного больше, чтобы покрыть всю ширину текста */
+    height: 20%;
+    pointer-events: none; /* Чтобы не мешало кликам */
+}
+
+.catalog{
+    padding: 32px;
+}
+
+h3{
+    font-size: 25px;
+    margin: 32px 0 32px 0;
+    
+}
+
+.pizza-cards{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1288px;
+}
+
+.pizza-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 420px;
+    width: 292px;
+    background: white;
+    border-radius: 15px;
+    position: relative;
+    margin:0 30px 60px 0;
+}
+
+.pizza-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;  
+}
+
+.pizza-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.pizza-name{
+    margin:8px 0 ;
+}
+
+.pizza-desc {
+    min-height: 42px;
+    font-size: 12px;
+    color: #7c7c7c;
+    font-weight: lighter;
+    line-height: 1.4;
+}
+
+.price-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 12px;
+    margin-top: 22px;
+}
+
+.add-btn {
+    display: block;
+    padding: 10px 30px;
+    background: #fff0e6;
+    color: #dd803e;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    line-height: 1,4;
+}
+
+.add-btn:hover {
+    background: #ffd2b3;
+}
+.pizza-card .price-block div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.pizza-card .recprice {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.6;
+    color: black;
+}
+
+.pizza-card .recprice2 {
+    font-size: 16px;
+    color: gray;
+}
+
+.pizza-card .discount {
+    position: absolute;
+    top: 95%; 
+    left: 10%; /* Центрируем относительно цены */
+    transform: translate(-50%, -50%); /* Точное выравнивание */
+    width: 20%; /* Немного больше, чтобы покрыть всю ширину текста */
+    height: 3%;
+    pointer-events: none; /* Чтобы не мешало кликам */
+}
+
+.sec-Dodo-info{
+    margin:32px;
+}
+
+.Dodo-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Dodo-deliv {
+    margin:0 40px 60px 0;
+    width: 45%;
+}
+
+.Dodo-sum-deliv{
+    margin:0 40px 60px 0;
+}
+
+.Dodo-info p{
+    padding: 10px;
+    font-size: 14px;
+}
+
+.orange-text{
+    font-size: 18px !important;
+    color:#FF6600;
+
+}
+.deliv-zone {
+    position: relative; /* Делаем контейнер относительным для позиционирования */
+    display: inline-block;
+}
+
+.deliv-zone img {
+    display: block;
+    height: auto;
+}
+
+.deliv-zone span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: black; 
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.sherlok{
+    display: flex;
+    background-color: #FF6600;
+    color: #ffffff;
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sherlok-right{
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+
+.secret-buyer__img{
+    margin-left: 130px;
+}
+.btn1{
+    margin-right: 150px;
+}
+
+.feedback-info{
+    background-color: #000000;
+    height: 100px;
+}
